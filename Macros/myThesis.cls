@@ -227,12 +227,6 @@
   \renewcommand{\headrulewidth}{0pt}
 }
 
-% START CUSTOM
-
-% FIXME custom
-\newcommand\FIXME[1]{{\color{red}#1}\xspace}
-\newcommand\cparagraph[1]{\vspace{1.2mm}\noindent \textbf{#1.}}
-
 %	CONTENTS HEADER
 
 \renewcommand{\@makeschapterhead}[1]{%
