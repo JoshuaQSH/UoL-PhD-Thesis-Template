@@ -1,0 +1,132 @@
+\include{Macros/MacroFile1}
+\documentclass[oneside,11pt]{Classes/myThesis}
+
+%%%%%%
+% PATH for the chapters FIGURES
+%%%%%%
+\graphicspath{{./Chapters/Chapter_1/Chapter_1_Fig/}     
+              {./Chapters/Chapter_2/Chapter_2_Fig/}
+              {./Chapters/Chapter_3/Chapter_3_Fig/}
+              {./ThesisFigs/}}
+
+%%%%%%
+% Constants
+%%%%%%
+\newcommand{\theAuthor}{Shenghao Qiu}
+\newcommand{\authorEmail}{sc19sq@leeds.ac.uk}
+\newcommand{\myTitle}{Accelerating deep learning workloads by optimising distributed communications and computation kernel}
+\pdfinfo { /Title  (\myTitle)
+           /Creator (TeX)
+           /Producer (pdfTeX)
+           /Author (\theAuthor \authorEmail)
+           /ModDate (D:\pdfdate)
+           /CreationDate (D:\pdfdate) % format D:YYYYMMDDhhmmss
+           /Subject (Condensed Matter Physics)
+           /Keywords (PhD, Thesis)}    
+		\pdfcatalog { /PageMode (/UseOutlines)
+                  /OpenAction (fitbh)  }
+
+%%%%%%
+% Title Page Information
+%%%%%%
+\title{\myTitle}
+\author{\href{mailto:\authorEmail}{\theAuthor}}
+\crest{\includegraphics[width=35mm]{Leeds_Crest.png}}
+
+%%%%%%
+% Title page for two logos
+%%%%%%
+% University Logo
+\logo{\includegraphics[width=50mm]{UoL_logo}}
+% Institute Logo
+\deptlogo{} %\includegraphics[width=50mm]{UoL_logo}} 
+
+\collegeordept{\href{https://eps.leeds.ac.uk/computing}{School of Computing}}
+\university{\href{http://www.leeds.ac.uk}{University of Leeds}}
+
+\degree{Doctor of Philosophy}
+\degreedate{\monthdate\today}
+
+
+%%%%%%
+% Optional Packages
+% Different font in captions
+% Different font in caption
+%%%%%%
+% \usepackage{StyleFiles/watermark}
+% \usepackage{xspace}  %add a space after maths if not already there
+% \usepackage{booktabs} %better tables
+% \usepackage{rotating}  %rotating figures and tables
+% \usepackage{array} %enhanced tables
+% \usepackage{ctable} %include a figure command
+% \usepackage{footnote}
+% \usepackage{multirow} %for merging cells on tables
+% \usepackage{times} % The "Times" font
+% \usepackage{Utopia} % The "Utopia" font
+
+\linespread{1.3} %1.5 line spacing
+
+\begin{document}
+% \baselineskip=18pt plus1pt
+
+\maketitle
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\pagenumbering{roman}
+\frontmatter
+
+%%%%%%
+% Include sections are required 
+%%%%%%
+
+%\include{Dedication/dedication}
+\include{IPStatement/ipstatement}
+\include{Acknowledgement/acknowledgement}
+\include{Abstract/abstract}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\include{Abbreviations/Abbreviations}
+%\include{Common_Symbols/Common_Symbols}
+
+\mainmatter
+
+\pagenumbering{arabic}
+
+%%%%%%
+% File path for chapter tex files 
+%%%%%%
+
+\include{Chapters/Chapter_1/Chapter_1_File}
+\include{Chapters/Chapter_2/Chapter_2_File}
+\include{Chapters/Chapter_3/Chapter_3_File}
+\include{Chapters/Chapter_4/Chapter_4_File}
+\include{Chapters/Chapter_5/Chapter_5_File}
+%\include{Chapters/Chapter_6/Chapter_6_File}
+
+%%%%%%
+% APPENDIX
+%%%%%%
+
+%\appendix
+\include{Appendix1/Appendix1}
+% More appendicies here.
+%\include{Appendix2/Appendix2}
+
+%%%%%%
+% REFERENCE
+%%%%%%
+
+\addcontentsline{toc}{chapter}{References}
+% bibliography style, should uncomment at some points
+% \bibliographystyle{thesis} 
+\renewcommand{\bibname}{References} 
+\bibliography{References/library} % References file
+
+
+\end{document}
