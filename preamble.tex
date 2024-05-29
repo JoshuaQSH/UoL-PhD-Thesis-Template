@@ -1,0 +1,91 @@
+\usepackage{listings}
+\usepackage{caption}
+
+%%%%%%
+% Optional Packages
+% Different font in captions
+% Different font in caption
+%%%%%%
+% \usepackage{Macros/watermark}
+% \usepackage{xspace}  %add a space after maths if not already there
+% \usepackage{booktabs} %better tables
+% \usepackage{rotating}  %rotating figures and tables
+% \usepackage{array} %enhanced tables
+% \usepackage{ctable} %include a figure command
+% \usepackage{footnote}
+% \usepackage{multirow} %for merging cells on tables
+% \usepackage{times} % The "Times" font
+% \usepackage{Utopia} % The "Utopia" font
+
+
+%%%%%%
+% Color custom
+%%%%%%
+
+\definecolor{Gray}{gray}{0.95}
+\definecolor{eminence}{RGB}{108,48,130}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%%%%%%
+% Code List custom
+%%%%%%
+
+\lstset{
+frame=b,
+basicstyle = \footnotesize\ttfamily,
+numberstyle=\tiny\color{codegray},
+stringstyle=\color{codepurple},
+commentstyle=\color{codegreen},
+numbers=left,
+%frame=single,
+float=tp,
+breaklines,
+keywordstyle=\color{magenta},
+%otherkeywords={free, append},
+xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+language=Python
+}
+
+\lstdefinestyle{interfaces}{
+  float=tp,
+  floatplacement=tbp,
+  abovecaptionskip=-5pt
+}
+
+\newcommand{\lstbg}[3][0pt]{{\fboxsep#1\colorbox{#2}{\strut #3}}}
+\lstdefinelanguage{diff}{
+  basicstyle=\ttfamily\scriptsize,,
+  morecomment=[f][\lstbg{red!20}]-,
+  morecomment=[f][\lstbg{green!20}]+,
+  morecomment=[f][\lstbg{yellow!20}]++,
+  morecomment=[f][\textit]{@@},
+  texcl=false
+}
+
+\lstdefinestyle{hs} {
+    language = C,
+    morekeywords = [3]{<<, >>},
+    morekeywords = [4]{++},
+    basicstyle=\ttfamily\scriptsize,
+    commentstyle=\color{blue}\ttfamily,
+    morecomment=[f][\lstbg{red!20}]-,
+    morecomment=[f][\lstbg{green!20}]+,
+    morecomment=[f][\lstbg{yellow!20}]++,
+    morecomment=[f][\lstbg{yellow!20}]--,
+    morecomment=[f][\textit]{@@},
+    texcl=false
+}
+
+%%%%%%
+% Common symbols
+%%%%%%
+
+\newcommand{\sys}{\textsc{Dark Lord Sauron}\xspace}
+\newcommand{\ttt}[1]{\texttt{#1}\xspace}
+\newcommand{\rev}[1]{#1}
+\newcommand\SystemName{\sys}
+\newcommand\FIXME[1]{{\color{red}#1}\xspace}
+\newcommand\cparagraph[1]{\vspace{1.2mm}\noindent \textbf{#1.}}

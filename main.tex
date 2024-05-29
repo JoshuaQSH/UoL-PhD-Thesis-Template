@@ -1,14 +1,16 @@
 \include{Macros/MacroFile1}
-\documentclass[oneside,11pt]{Classes/myThesis}
+\documentclass[oneside,11pt]{Macros/myThesis}
+
+%%%%%%
+% Your custom settings
+%%%%%%
+\input{preamble}
+
 
 %%%%%%
 % PATH for the chapters FIGURES
 %%%%%%
-\graphicspath{{./Chapters/Chapter_1/Chapter_1_Fig/}     
-              {./Chapters/Chapter_2/Chapter_2_Fig/}
-              {./Chapters/Chapter_3/Chapter_3_Fig/}
-              {./Chapters/Chapter_3/Chapter_4_Fig/}
-              {./Chapters/Chapter_3/Chapter_5_Fig/}
+\graphicspath{{./Figures/}
               {./ThesisFigs/}}
 
 %%%%%%
@@ -32,7 +34,7 @@
 % Title Page Information
 %%%%%%
 \title{\myTitle}
-\author{\href{mailto:\authorEmail}{\theAuthor}}
+\author{\theAuthor}
 \crest{\includegraphics[width=35mm]{Leeds_Crest.png}}
 
 %%%%%%
@@ -50,22 +52,6 @@
 \degreedate{\monthdate\today}
 
 
-%%%%%%
-% Optional Packages
-% Different font in captions
-% Different font in caption
-%%%%%%
-% \usepackage{StyleFiles/watermark}
-% \usepackage{xspace}  %add a space after maths if not already there
-% \usepackage{booktabs} %better tables
-% \usepackage{rotating}  %rotating figures and tables
-% \usepackage{array} %enhanced tables
-% \usepackage{ctable} %include a figure command
-% \usepackage{footnote}
-% \usepackage{multirow} %for merging cells on tables
-% \usepackage{times} % The "Times" font
-% \usepackage{Utopia} % The "Utopia" font
-
 \linespread{1.3} %1.5 line spacing
 
 \begin{document}
@@ -82,10 +68,10 @@
 % Include sections are required 
 %%%%%%
 
-%\include{Dedication/dedication}
-\include{IPStatement/ipstatement}
-\include{Acknowledgement/acknowledgement}
-\include{Abstract/abstract}
+\include{Sections/dedication}
+\include{Sections/ipstatement}
+\include{Sections/acknowledgement}
+\include{Sections/abstract}
 \newpage
 \tableofcontents
 \newpage
@@ -93,32 +79,27 @@
 \newpage
 \listoftables
 \newpage
-\include{Abbreviations/Abbreviations}
-%\include{Common_Symbols/Common_Symbols}
+\include{Sections/Abbreviations}
 
 \mainmatter
 
 \pagenumbering{arabic}
 
 %%%%%%
-% File path for chapter tex files 
+% Main Chapters begins 
 %%%%%%
 
-\include{Chapters/Chapter_1/Chapter_1_File}
-\include{Chapters/Chapter_2/Chapter_2_File}
-\include{Chapters/Chapter_3/Chapter_3_File}
-\include{Chapters/Chapter_4/Chapter_4_File}
-\include{Chapters/Chapter_5/Chapter_5_File}
-%\include{Chapters/Chapter_6/Chapter_6_File}
+\include{Sections/Chapter_1}
+\include{Sections/Chapter_2}
+\include{Sections/Chapter_3}
+\include{Sections/Chapter_4}
+\include{Sections/Chapter_5}
 
 %%%%%%
 % APPENDIX
 %%%%%%
-
 %\appendix
-\include{Appendix1/Appendix1}
-% More appendicies here.
-%\include{Appendix2/Appendix2}
+% \include{Sections/Appendix1}
 
 %%%%%%
 % REFERENCE
