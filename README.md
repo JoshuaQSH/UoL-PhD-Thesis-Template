@@ -6,6 +6,8 @@
 
 This repository contains a LaTeX template for creating PhD theses at the University of leeds. The original template is copied from: https://github.com/stonerlab/Thesis-template
 
+See `GuidesAndOthers` for more guides.
+
 ## Instruction
 
 - Download the .zip archive, clone or fork this repository.
