@@ -1,6 +1,6 @@
-# University of Leeds
+# University of Leeds - PhD thesis template
 
-## DSS - System Software Group sharing
+## Distributed Systems and Services (DSS) | School of Computing sharing
 
 This repository contains a $LaTeX$ template for creating PhD theses at the University of leeds. The original template is copied from: https://github.com/stonerlab/Thesis-template/tree/PhD
 
