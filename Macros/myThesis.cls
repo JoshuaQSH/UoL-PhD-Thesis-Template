@@ -347,15 +347,13 @@
 \end{picture}
   \begin{center}
     { \Huge {\bfseries {\@title}} \par}
-{\large \vspace*{20mm} {{\@crest} \par} \vspace*{20mm}}
+{\large \vspace*{10mm} {{\@crest} \par} \vspace*{10mm}}
     {{\Large \@author} \par}
 {\large \vspace*{1ex}
     {{\@university} \par}
-\vspace*{1ex}
     {{\@collegeordept} \par}
 \vspace*{20mm}
     {{\submittedtext} \par}
-\vspace*{1ex}
     {\it {\@degree} \par}
 \vspace*{2ex}
     {\@degreedate}}

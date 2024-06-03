@@ -4,6 +4,8 @@
 
 This repository contains a $LaTeX$ template for creating PhD theses at the University of leeds. The original template is copied from: https://github.com/stonerlab/Thesis-template/tree/PhD
 
+Notes: currently the title should be within 4 lines (included), otherwise the title page will go ugly.
+
 - `Macros`: General thesis style settings
 - `ThesisFigs`: Figures for logos 
 - `GuidesAndOthers`: University thesis guides
