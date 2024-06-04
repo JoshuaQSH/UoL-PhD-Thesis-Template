@@ -1,0 +1,21 @@
+import torch.nn as nn
+import dgl.nn.pytorch as dglnn
++import falcon
+
+class GNNModel(nn.Module):
+    def __init__(self, *(parameters)):
+        super().__init__()
+        # GNN model layer, GraphSAGE as an example
+        self.layer = dglnn.SAGEConv(in_feat, n_hidden)
+        # Hyperparameters 
+        # and activation function settings
+        ...
+        # node embeddings here
++       self.emb_layer = falcon.EmbeddingBag(
++           num_embeddings = num_nodes,
++           embedding_dim = in_feat,
++           num_rank = 2, # Num. tt_cores
++           cached = True, # caching the nodes
++           fusion = True, # kernel fusion
++           ...
++       )
