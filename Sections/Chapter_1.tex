@@ -87,7 +87,35 @@ Elf              & 64.8        & 2x \\
   \label{alg:example}
 \end{algorithm}
 
+%% Style: 1) classicstyle, 2) interfaces and 3) hs
 \lstinputlisting[language=Python, basicstyle=\footnotesize,style=hs,frame=lines,upquote=true, captionpos=b, caption={GNN Model Class define.},label={list:model_def}]{Codes/class.lst}
+
+%% Classic listings from: https://www.overleaf.com/learn/latex/Code_listing
+\lstset{style=classicstyle}
+\begin{lstlisting}[language=Python, caption=Python example][t!]
+import numpy as np
+    
+def incmatrix(genl1,genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None #to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  #dummy variable
+    
+    #compute the bitwise xor matrix
+    M1 = bitxormatrix(genl1)
+    M2 = np.triu(bitxormatrix(genl2),1) 
+
+    for i in range(m-1):
+        for j in range(i+1, m):
+            [r,c] = np.where(M2 == M1[i,j])
+            for k in range(len(r)):
+                VT[(i)*n + r[k]] = 1;
+                VT[(i)*n + c[k]] = 1;
+                VT[(j)*n + r[k]] = 1;
+                VT[(j)*n + c[k]] = 1;
+            
+    return M
+\end{lstlisting}
 
 
 
