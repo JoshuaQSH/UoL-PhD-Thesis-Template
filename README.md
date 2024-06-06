@@ -2,11 +2,13 @@
 
 ## Distributed Systems and Services (DSS) | School of Computing sharing
 
-This repository contains a $LaTeX$ template for creating PhD theses at the University of leeds. The original template is copied from: https://github.com/stonerlab/Thesis-template/tree/PhD
+This repository contains a $LaTeX$ template for creating PhD thesis at the University of Leeds. The original template is copied from: https://github.com/stonerlab/Thesis-template/tree/PhD
 
-Notes: currently the title should be within 4 lines (included), otherwise the title page will go ugly.
+Notes: currently the title should be within 4 lines (included), otherwise the title page will go bizarre.
 
 - `Macros`: General thesis style settings
+- `Codes`: For Code snippets
+- `Sources`: For figures sources (e.g. vsdx files)
 - `ThesisFigs`: Figures for logos 
 - `GuidesAndOthers`: University thesis guides
 
